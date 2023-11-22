@@ -39,15 +39,17 @@ publish.addEventListener('click', () => {
     const message = inputEl.value;
     let votes = 0;
 
-    push(convosInDB, { receipient, sender, message, votes })
-        .then(() => {
-            fromEl.value = '';
-            toEl.value = '';
-            inputEl.value = '';
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+    if (receipient && sender && message) {
+        push(convosInDB, { receipient, sender, message, votes })
+            .then(() => {
+                fromEl.value = '';
+                toEl.value = '';
+                inputEl.value = '';
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
 });
 
 const addToResults = (id, convo) => {
