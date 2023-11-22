@@ -39,7 +39,7 @@ publish.addEventListener('click', () => {
     const message = inputEl.value;
     let votes = 0;
 
-    if (receipient === '' && sender === '' && message === '') {
+    if (!(receipient === '') && !(sender === '') && !(message === '')) {
         push(convosInDB, { receipient, sender, message, votes })
             .then(() => {
                 fromEl.value = '';
