@@ -112,6 +112,13 @@ body {
     text-align: left;
 }
 
+.no-convo {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
 .result {
     background: #FFF;
     padding: 14px;
